@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL, MySQLdb
 from flask_cors import CORS
-import bcrypt
+import bcrypt, os
 
 
 app = Flask(__name__)
@@ -21,6 +21,11 @@ mysql = MySQL(app)
 @app.route('/')
 def home():
     return render_template("home.html")
+
+
+def main():
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
 
 @app.route('/login',methods=["GET","POST"])
@@ -72,4 +77,4 @@ def register():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    main()
