@@ -10,9 +10,9 @@ app.secret_key = "^A%DJAJU^JJ123"
 
 
 app.config['MYSQL_HOST'] = 'sql10.freemysqlhosting.net'
-app.config['MYSQL_USER'] = 'sql10325576'
-app.config['MYSQL_PASSWORD'] = 'Dqm26RMtFv'
-app.config['MYSQL_DB'] = 'sql10325576'
+app.config['MYSQL_USER'] = ''
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = ''
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
